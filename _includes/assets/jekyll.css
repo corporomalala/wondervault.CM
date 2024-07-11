@@ -1,0 +1,4 @@
+/*** JEKYLL ***/
+.m-gallery.companies .m-gallery-list { {% for file in site.data.companies %}{% capture totalCompanies %}{{ forloop.length }}{% endcapture %}{% endfor %} width: {{ totalCompanies | times: 75 }}%; }
+.m-gallery.gigs .m-gallery-list { {% for file in site.data.gigs %}{% capture totalGigs %}{{ forloop.length }}{% endcapture %}{% endfor %} width: {{ totalGigs | times: 75 }}%; }
+/*** END JEKYLL ***/

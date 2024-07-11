@@ -1,0 +1,26 @@
+---
+layout: default
+---
+		<main class="d-midWrap">
+			<header class="header">
+				<div>
+					<span>Order on Whatsapp</span>
+					<br />
+					<a href="whatsapp://send?abid={{ site.metadata.whatsapp | remove: ' ' | replace: '(+27)', '+27' }}&text={{ 'Hello, I would like to make an order for WonderVault: ' | replace: ',', '%2C' | replace: ' ', '%20' }}%20{{ page.name | split: '.' | first | capitalize | replace: '-', '%20' }}" class="u-btn_cta">{{ site.metadata.whatsapp }}</a>
+				</div>
+				
+				<span class="header-spacer">&nbsp;</span>
+				
+				<h1 class="header-title">WonderVault</h1>
+			</header>
+			
+			<section class="u-product">
+				<img src="/assets/images/products/{{ page.name | split: '.' | first }}.png" />
+			</section>
+			
+			<footer class="footer">
+				&copy; Copyrights 2024: <a href="https://corporomalala.com">Corporo Malala</a>. All rights reversed.
+			</footer>
+		</main>
+		
+		<script src="/assets/scripts/www-dot-corporomalala-dot-com.js"></script>

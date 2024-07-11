@@ -1,0 +1,18 @@
+metadata:
+  name: "WonderVault"
+  whatsapp: "(+27) 61 484 9225"
+
+collections:
+  products:
+    output: true
+    permalink: /sesame-open/:path/
+  pages:
+    output: true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "products"
+    values:
+      layout: "product"

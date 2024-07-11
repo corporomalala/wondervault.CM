@@ -1,0 +1,12 @@
+---
+---
+<!DOCTYPE html>
+<html class="js-html{% if page.layout == "product" %} pg-product{% endif %}">
+	<head>
+		{% include components/meta-tags.html %}
+	</head>
+	
+	<body>
+		{{ content }}
+	</body>
+</html>
