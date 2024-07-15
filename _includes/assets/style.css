@@ -37,6 +37,15 @@ body, html { background-color: #eee; }
 .footer a { text-decoration: underline; }
 /*** END FONTS ***/
 
+/*** MEDIA ***/
+.u-wheel-button-img { background-image: url("/assets/images/icon_treasure_monochrome.png"); }
+.u-wheel-button-img {
+	background-repeat: no-repeat;
+	background-position: center 19%;
+	background-size: 50%;
+}
+/*** END MEDIA ***/
+
 /*** UTILITIES ***/
 	/*** .u-btn_cta ***/
 	.u-btn_cta {

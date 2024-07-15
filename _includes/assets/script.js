@@ -2,8 +2,10 @@ function rand(min, max) {
   return Math.random() * (max - min) + min;
 }
 
-var color = ['#AAA','#DDD','#AAA','#DDD','#AAA','#DDD','#AAA','#DDD','#AAA','#DDD'];
-var label = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '+'];
+var color = ['#AAA','#DDD','#AAA','#DDD','#AAA','#DDD','#AAA','#DDD','#AAA','#DDD', '#AAA', '#DDD'];
+// var label = ['', 't', 'l', 'u', 'a', 'V', 'r', 'e', 'd', 'n', 'o', 'W'];
+// var label = ['W', 'o', 'n', 'd', 'e', 'r', 'V', 'a', 'u', 'l', 't', ''];
+var label = ['W', 'O', 'N', 'D', 'E', 'R', 'V', 'A', 'U', 'L', 'T', ''];
 var slices = color.length;
 var sliceDeg = 360 / slices;
 var deg = rand(0, 360);
@@ -51,7 +53,7 @@ function drawImg() {
 var count = 1;
 
 function anim() {
-  deg += speed;
+  deg -= speed;
   deg %= 360;
   
   // count += 1;
@@ -75,7 +77,23 @@ function anim() {
   if (lock && !speed){
     var ai = Math.floor(((360 - deg - 90) % 360) / sliceDeg); // deg 2 Array Index
     ai = (slices+ai) % slices; // Fix negative index
-    return alert("You got:\n"+ label[ai] ); // Get Array Item from end Degree
+	
+	switch(label[ai]) {
+		case "W": return alert("Your word is: Wisdom.");
+		case "O": return alert("Your word is: Oasis.");
+		case "N": return alert("Your word is: Nirvana.");
+		case "D": return alert("Your word is: Dream.");
+		case "E": return alert("Your word is: Echantement.");
+		case "R": return alert("Your word is: Riches.");
+		case "V": return alert("Your word is: Value.");
+		case "A": return alert("Your word is: Alchemy.");
+		case "U": return alert("Your word is: Unique.");
+		case "L": return alert("Your word is: Luxury.");
+		case "T": return alert("Your word is: Triumph.");
+		
+		default: return alert("Greetings from WonderVault.");
+	}
+//    return alert("You got:\n"+ label[ai] ); // Get Array Item from end Degree
   }
 
   drawImg();
@@ -88,5 +106,5 @@ document.getElementById("jsWheel").addEventListener("click", function(){
   isStopped = true;
 }, false);
 document.getElementById("jsProduct").addEventListener("click", function(){
-  window.location.replace("/sesame-open/item-1/");
+  window.location.replace("/sesame-open/robot-watch/");
 });
