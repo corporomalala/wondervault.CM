@@ -106,5 +106,5 @@ document.getElementById("jsWheel").addEventListener("click", function(){
   isStopped = true;
 }, false);
 document.getElementById("jsProduct").addEventListener("click", function(){
-  window.location.replace("/sesame-open/robot-watch/");
+  window.location.replace("/access/robot-watch/");
 });
