@@ -5,7 +5,7 @@ metadata:
 collections:
   products:
     output: true
-    permalink: /sesame-open/:path/
+    permalink: /access/:path/
   pages:
     output: true
 
