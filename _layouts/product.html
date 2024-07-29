@@ -1,18 +1,45 @@
 ---
 layout: default
 ---
+		<input type="checkbox" id="chkbx4info" name="chkbx4info" tabindex="1" />
+
 		<main class="d-midWrap">
 			<header class="header">
-				<div>
-					<span>Order on Whatsapp</span>
-					<br />
-					<a href="whatsapp://send?abid={{ site.metadata.whatsapp | remove: ' ' | replace: '(+27)', '+27' }}&text={{ 'Hello, I would like to make an order for WonderVault: ' | replace: ',', '%2C' | replace: ' ', '%20' }}%20{{ page.name | split: '.' | first | capitalize | replace: '-', '%20' }}" class="u-btn_cta">{{ site.metadata.whatsapp }}</a>
-				</div>
+				<nav class="header-nav">
+					<div>
+						<span>Order on Whatsapp</span>
+						<br />
+						<a href="https://wa.me/{{ site.metadata.whatsapp | remove: ' ' | replace: '(+27)', '+27' }}?text={{ 'Hello, I would like to make an order for WonderVault: ' | replace: ',', '%2C' | replace: ' ', '%20' }}%20{{ page.name | split: '.' | first | capitalize | replace: '-', '%20' }}" class="u-btn_cta">{{ site.metadata.whatsapp }}</a>
+					</div>
+					<div>
+						<span>&nbsp;</span>
+						<br />
+						<label for="chkbx4info" class="u-btn_cta for-info">&nbsp;</label>
+					</div>
+				</nav>
 				
 				<span class="header-spacer">&nbsp;</span>
 				
 				<h1 class="header-title">WonderVault</h1>
 			</header>
+			
+			<section class="info">
+				<div class="info-step">
+					<span class="info-step-count">Step 1: Place Your Order</span>
+					<span class="info-step-hr"></span>
+					<p class="info-step-p">Say hello on WhatsApp! Simply send us a message with the items you wish to order, whether it's with images or links to the page. And our friendly team will promptly assist you, and confirm the avalaibility of a quantity order or a particular color. If you need any recommendations or have questions about the products, we're here to help. Your satisfaction is our top priority, so don't hesitate to reach out.</p>
+				</div>
+				<div class="info-step">
+					<span class="info-step-count">Step 2: Proof of Payment -- 10am</span>
+					<span class="info-step-hr"></span>
+					<p class="info-step-p">Let us know you paid! Payment includes the price of items plus delivery (PAXI: R70 or R90). Once you've made the payment, send us a screenshot, a photo or a pdf of the payment confirmation. This helps us process your order quickly and efficiently. We appreciate your cooperation in keeping everything running smoothly.</p>
+				</div>
+				<div class="info-step">
+					<span class="info-step-count">Step 3: PAXI Delivery</span>
+					<span class="info-step-hr"></span>
+					<p class="info-step-p">Get in your neighborhood! We partner with PAXI to ensure your order is delivered promptly and securely. You'll receive a PAXI tracking number so you can monitor the delivery status in real-time. PAXI delivers directly to your neighborhood, making it convenient for you to receive your items. Enjoy the ease and reliability of our delivery service.</p>
+				</div>
+			</section>
 			
 			<section class="u-product">
 				<img src="/assets/images/products/WonderVault_{{ page.name | split: '.' | first }}.png" />

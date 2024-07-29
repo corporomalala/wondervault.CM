@@ -7,14 +7,19 @@ main {// min-height: 100%; }
 .u-wheel-area-canvas { position: relative; z-index: 10; }
 .u-wheel-button,
 .u-wheel-area-thingy { position: relative; z-index: 20; }
+
+.info label { position: relative; z-index: 100; }
 /*** END Z-INDEXES ***/
 
 /*** COLORS ***/
 body, html { background-color: #eee; }
 
+.info,
 .u-wheel-button-img,
 .u-btn_cta { background-color: black; }
 
+.info-step-hr { background-color: white; }
+.info, .info *,
 .u-btn_cta { color: white; }
 /*** END COLORS ***/
 
@@ -32,12 +37,21 @@ body, html { background-color: #eee; }
 
 .footer,
 .header,
+.info-step-count,
+.info-step-p,
 .nav-content { text-align: center; }
 
 .footer a { text-decoration: underline; }
 /*** END FONTS ***/
 
 /*** MEDIA ***/
+.pg-product .header-nav .u-btn_cta.for-info { background-image: url("/assets/images/icon_info_white.png"); }
+.u-btn_cta {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 40%;
+}
+
 .u-wheel-button-img { background-image: url("/assets/images/icon_treasure_monochrome.png"); }
 .u-wheel-button-img {
 	background-repeat: no-repeat;
@@ -132,14 +146,35 @@ body, html { background-color: #eee; }
 
 	/*** .header ***/
 	.pg-product .header { display: flex; }
+	.pg-product .header { align-items: center; }
 	.pg-product .header-spacer { flex: 1; }
 	
 	.pg-product .header .u-btn_cta { margin: initial !important; }
+	
+	/*** .info ***/
+	.info {
+		padding: 1em;
+		margin-bottom: 1.9em;
+	}
+	.info-step {
+		padding: 1em;
+	}
+	.info-step-count {
+		display: block;
+	}
+	.info-step-hr {
+		width: 100%; height: .19em;
+		display: block;
+		margin-bottom: .7em;
+	}
 /*** END PAGE: PRODUCT ***/
 
 /*** INTERRACTIVITY ***/
 .u-wheel-button-img,
 .u-btn_cta { cursor: pointer; }
+
+.info { display: none; }
+#chkbx4info:checked ~ main .info { display: flex !important; }
 /*** END INTERRACTIVITY ***/
 
 /*** MEDIA-QUERIES ***/
@@ -148,14 +183,22 @@ body, html { background-color: #eee; }
 	
 	.u-wheel-button-img { position: relative; bottom: -7vw !important; }
 	
-	/*** PAGES: PRODUCT | .header ***/
+	/*** PAGE: PRODUCT | .header ***/
 	.pg-product .header { flex-direction: column-reverse; }
+	
+	.pg-product .header-nav div:nth-child(2) {// margin: 1em 0; }
 }
 @media screen and (min-width: 50em) {
 	* { font-size: 18px; }
 	
 	.u-wheel { max-width: 70%; }
 	.u-wheel-button-img { position: relative; bottom: -4vw !important; }
+	
+	/*** PAGE: PRODUCT | .header ***/
+	.pg-product .header-nav { display: flex; }
+	.info-step { flex: 1; }
+	
+	.pg-product .header-nav div:nth-child(2) { margin: 0 1em; }
 }
 /*** END MEDIA-QUERIES ***/
 
