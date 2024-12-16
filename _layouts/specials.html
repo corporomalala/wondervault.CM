@@ -1,0 +1,53 @@
+---
+layout: default
+---
+		<main class="d-midWrap">
+			<nav class="menu">
+				<hgroup class="menu-hgroup">
+					<a href="https://wondervault.corporomalala.com"><h1 class="menu-hgroup-title">WonderVault</h1></a>
+					<h1 class="menu-hgroup-subtitle">Specials</h1>
+					<p class="menu-hgroup-tagline">Product Packs at Incredible Prices</p>
+				</hgroup>
+			</nav>
+		
+			<section class="specials"><ul class="specials-list">{% for file in site.data.specials %}{% for data in file %}
+				<li class="specials-list-item"><div class="pack">
+					<header class="pack-header">
+						<nav class="pack-header-buy">
+							<span class="pack-header-buy-span">{% for content in data[1] %}{{ content.validity_text }}{% endfor %}&nbsp;&nbsp;</span>
+							<a href="https://wa.me/+27630478534" class="pack-header-buy-span is-{% for content in data[1] %}{{ content.validity }}{% endfor %}"><span class="pack-header-buy-span-icon"></span>(+27)614849225</a>
+						</nav>
+					
+						<hgroup class="pack-header-hgroup">
+							<h1 class="pack-header-hgroup-title">4 Items for {{ data[0] | capitalize }}</h1>
+							
+							<marquee class="pack-header-hgroup-marquee">{% for content in data[1] %}{% for iContent in content.pack %}
+								<span class="pack-header-hgroup-marquee-span">({{ forloop.index }}) {{ iContent }}</span>{% endfor %}{% endfor %}
+							</marquee>
+						</hgroup>
+						<div class="pack-header-price">
+							<span class="pack-header-price-span">Special Gift Pack for:&nbsp;</span>
+							<span class="pack-header-price-span">R{% for content in data[1] %}{{ content.price }}{% endfor %}</span>
+						</div>
+					</header>
+					
+					<div class="pack-gallery"><ul class="pack-gallery-list">
+						{% for i in (1..4) %}<li class="pack-gallery-list-item">{% for media in site.static_files %}{% if media.path contains "assets/images/specials" %}{% if media.path contains data[0] %}{% if media.path contains i %}{% if media.path contains ".png" %}{% if media.path contains "diapo" %}{% assign vProductKey = "" %}{% capture vProductKey %}{{ media.path | split: '/' | last | split: '_diapo' | first | remove: '_' }}{% endcapture %}{% for i in (1..2) %}
+							<input type="radio" id="rdb4{{ vProductKey }}{% if forloop.first %}a{% else %}b{% endif %}" class="pack-gallery-input nthChild-{{ i }}" name="rdbs4{{ vProductKey }}"{% if forloop.first %} checked{% endif %} />{% endfor %}
+							<nav class="pack-gallery-nav">{% for i in (1..2) %}
+								<label for="rdb4{{ vProductKey }}{% if forloop.first %}a{% else %}b{% endif %}" class="pack-gallery-nav-toggle u-button nthChild-{{ i }}"></label>{% endfor %}
+							</nav>
+							{% endif %}
+							<img src="/assets/images/placeholder-1x1.png" class="pack-gallery-img nthChild-1" style="background-image: url('{{ media.path }}');" />{% if media.path contains "diapo" %}
+							<img src="/assets/images/placeholder-1x1.png" class="pack-gallery-img nthChild-2" style="background-image: url('{{ media.path | replace: "_a.", "_b." }}');" />{% endif %}{% if media.path contains "video" %}
+							
+							<a href="{{ media.path | replace: 'png', 'mp4' }}" class="pack-gallery-button" title="Download AD for {{ data[0] | capitalize }}" download>Watch AD</a>{% endif %}
+						{% break %}{% endif %}{% endif %}{% endif %}{% endif %}{% endfor %}</li>{% endfor %}
+					</ul></div>
+				</li>{% endfor %}{% endfor %}
+			</ul></section>
+			
+			<footer class="footer">
+				&copy; Copyrights 2024 <a href="https://corporomalala.com">Corporo Malala</a>. All rights reserved.
+			</footer>
+		</main>

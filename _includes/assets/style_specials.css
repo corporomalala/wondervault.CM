@@ -1,0 +1,231 @@
+/*** CANCEL ***/
+html, body, main { width: 100%; height: 100%; }
+/*** END CANCEL ***/
+
+/*** COLORS ***/
+.pack-header-hgroup-title,
+.pack-header-hgroup-marquee-span,
+.pack-gallery-button { color: white; }
+.pack-gallery-nav-toggle:hover,
+.pack-gallery-nav-toggle:active,
+.pack-gallery-nav-toggle:focus { border-color: white; background-color: white; }
+
+html, body, main { background-color: #eee; }
+
+.pack-header-price { background-color: #AAA; }
+.pack-header-buy-span { color: #AAA; }
+.pack-header-buy-span { border-color: #AAA; }
+
+.pack-header-hgroup,
+.pack-gallery-button { background-color: black; }
+.pack-header-price-span:nth-child(2),
+.pack-gallery-nav-toggle { border-color: black; }
+/*** END COLORS ***/
+
+/*** FONTS ***/
+@font-face{
+	font-family:"Megatech";src:url("../../assets/fonts/MegatechAlt.ttf");/*src:url("../../assets/fonts/ALPHABETH.eot") format("embedded-opentype"),url("../../assets/fonts/ALPHABETH.woff2") format("woff2"),url("../../assets/fonts/ALPHABETH.woff") format("woff"),url("../../assets/fonts/ALPHABETH.ttf") format("trutype"),url("../../assets/fonts/ALPHABETH.svg") format("svg");*/}
+@font-face{
+	font-family:"Megatech Blank";src:url("../../assets/fonts/MegatechAltBold.ttf");/*src:url("../../assets/fonts/ALPHABETH.eot") format("embedded-opentype"),url("../../assets/fonts/ALPHABETH.woff2") format("woff2"),url("../../assets/fonts/ALPHABETH.woff") format("woff"),url("../../assets/fonts/ALPHABETH.ttf") format("trutype"),url("../../assets/fonts/ALPHABETH.svg") format("svg");*/}
+
+.footer a,
+.menu-hgroup-title,
+.pack-header-hgroup-title { font-family: "Megatech"; }
+.menu-hgroup-subtitle,
+.pack-header-price-span:nth-child(2) { font-family: "Megatech Blank"; }
+.menu-hgroup-tagline,
+.pack-header-buy-span,
+.pack-header-hgroup-marquee-span,
+.pack-header-price-span,
+.pack-gallery-button {font-family:"Arial Black", sans-serif;}
+
+.pack-gallery-button { font-size: .75em; }
+
+.pack-header-buy-span:nth-child(2) { letter-spacing: .25em; }
+
+.pack-gallery-button,
+.pack-gallery-nav { text-align: center; }
+.pack-header-buy,
+.pack-header-price { text-align: right; }
+.pack-header-buy-span:nth-child(2).is-expired { font-style: strikethrough; }
+/*** END FONTS ***/
+
+/*** MEDIA ***/
+.pack-header-buy-span:nth-child(2):before { background-image: url("../../assets/images/icon_whatsapp_grey.png"); }
+.pack-header-buy-span:nth-child(2):before {
+	background-size: cover;
+}
+
+.pack-gallery-img { background-size: cover; }
+/*** END MEDIA ***/
+
+/*** PAGE: SPECIALS ***/
+	/*** COMMONS ***/
+	
+	/*** .footer ***/
+	.footer {
+		padding: 1em;
+	}
+	
+	/*** .menu ***/
+	.menu {
+		padding: 1.25em 0;
+	}
+	.menu-hgroup-subtitle,
+	.menu-hgroup-title {
+		display: inline-block;
+		margin: 0 .5em;
+		vertical-align: middle;
+	}
+	.menu-hgroup-tagline {
+		display: block;
+		padding: .25em .5em;
+	}
+	
+	/*** .pack ***/
+	.pack-header-buy {
+		padding: .5em 1em;
+	}
+	.pack-header-buy-span:nth-child(1) {
+		display: block;
+	}
+	.pack-header-buy-span:nth-child(2) {
+		position: relative;
+	}
+	.pack-header-buy-span:nth-child(2):before {
+		content: "";
+		position: absolute; top: 0; left: -1.5em;
+		width: 1.25em; height: 1.25em;
+		display: inline-block;
+	}
+	
+	.pack-header-hgroup {
+		display: block;
+		padding: 1em 0;
+	}
+	.pack-header-hgroup-marquee {
+		padding-top: 1em;
+	}
+	.pack-header-hgroup-marquee-span {
+		display: inline-block;
+	}
+
+	.pack-header-price {
+		padding: .5em 1em;
+	}
+	.pack-header-price-span {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.pack-header-price-span:nth-child(2) {
+//		min-width: 25%;
+	}
+
+	.pack-gallery-button {
+		position: absolute; bottom: 1em; left: 25%;
+		width: 50%;
+		display: inline-block;
+		padding: .5em;
+	}
+	.pack-gallery-list-item {
+		position: relative;
+		display: inline-block;
+	}
+	.pack-gallery-nav {
+		width: 100%;
+		position: absolute; bottom: 1em;
+	}
+	.pack-gallery-nav-toggle {
+		width: 1.5em; height: 1.5em;
+		display: inline-block;
+		margin: 0 .5em;
+		border-radius: 50%;
+	}
+/*** END PAGE: SPECIALS ***/
+
+/*** INTERACTIVITY ***/
+.u-button { cursor: pointer; }
+
+.pack-header-buy-span:nth-child(2).is-expired:before { display: none !important; }
+
+.pack-gallery-input.nthChild-1:checked ~ .pack-gallery-img.nthChild-2,
+.pack-gallery-input.nthChild-2:checked ~ .pack-gallery-img.nthChild-1 { display: none; }
+
+.pack-gallery-nav-toggle { background-color: black; }
+.pack-gallery-input.nthChild-1:checked ~ .pack-gallery-nav .pack-gallery-nav-toggle.nthChild-1,
+.pack-gallery-input.nthChild-2:checked ~ .pack-gallery-nav .pack-gallery-nav-toggle.nthChild-2 { background-color: white; }
+/*** END INTERACTIVITY ***/
+
+/*** MEDIA-QUERIES ***/
+@media screen and (max-width: 50em) {
+	/*** FONTS ***/
+	* { font-size: 14px; }
+	.pack-header-price-span:nth-child(2) { font-size: 1.5em; }
+	.menu-hgroup-subtitle,
+	.menu-hgroup-tagline,
+	.menu-hgroup-title,
+	.pack-header-buy-span:nth-child(2),
+	.pack-header-hgroup-title,
+	.pack-header-price-span:nth-child(1) { font-size: 1em; }
+	
+	/*** COMMONS ***/
+	a.pack-header-buy-span:nth-child(2).is-valid,
+	.pack-header-price-span:nth-child(2) { border-width: 0 0 5px 0; border-style: solid; }
+	.pack-gallery-list { border-bottom-width: 5px; border-style: solid; }
+	.pack-gallery-nav-toggle { border-width: 5px; border-style: solid; }
+	
+	/*** PAGE: SPECIALS ==> .pack ***/
+	.pack { margin: 7em 0; }
+	
+	.pack-header-hgroup-marquee-span { min-width: 80%; }
+	
+	.pack-gallery-list-item { width: 50%; }
+}
+@media screen and (min-width: 50em) {
+	/*** FONTS ***/
+	* { font-size: 18px; }
+	.pack-header-price-span:nth-child(2) { font-size: 4em; }
+	.menu-hgroup-subtitle,
+	.menu-hgroup-tagline,
+	.menu-hgroup-title,
+	.pack-header-buy-span:nth-child(2),
+	.pack-header-hgroup-title,
+	.pack-header-price-span:nth-child(1) { font-size: 2em; }
+	
+	/*** COMMONS ***/
+	.pack-header-buy-span:nth-child(2).is-valid,
+	.pack-header-price-span:nth-child(2) { border-width: 0 0 7px 0; border-style: solid; }
+	.pack-gallery-list { border-bottom-width: 7px; border-style: solid; }
+	.pack-gallery-nav-toggle { border-width: 7px; border-style: solid; }
+	
+	/*** PAGE: SPECIALS ==> .pack ***/
+	.pack { margin: 10em 0; }
+	
+	.pack-header-hgroup-marquee-span { min-width: 50%; }
+	
+	.pack-gallery-list-item { width: 25%; }
+}
+@media screen and (min-width: 100em) {
+	/*** FONTS ***/
+	* { font-size: 21px; }
+}
+/*** END MEDIA-QUERIES ***/
+
+/*** DECORATION ***/
+	/*** .d-cssCentered ***/
+	.d-cssCentered {
+		display: flex;
+		align-items: center;
+		justify-nav: center;
+	}
+	
+	/*** .d-midWrap ***/
+	.d-midWrap {
+		width: 100%; max-width: 75em;
+		margin: 0 auto;
+	}
+/*** END DECORATION ***/
+
+/*** CSS-HACKS ***/
+.pack-header-hgroup-title { margin: 0 10px; }
+/*** END CSS-HACKS ***/

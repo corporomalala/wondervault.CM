@@ -1,0 +1,5 @@
+- "athletes":
+  - pack: ["Wrist Compression Protector", "Elbow Compression Protector", "Knee Compression Protector", "Gym Compression Protector"]
+  - price: 280
+  - validity: "valid"
+  - validity_text: "valid until december 31, 2024"

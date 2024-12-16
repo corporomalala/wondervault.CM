@@ -1,0 +1,4 @@
+---
+layout: specials
+permalink: /specials/
+---
