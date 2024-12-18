@@ -47,7 +47,7 @@ html, body, main { background-color: #eee; }
 .pack-gallery-nav { text-align: center; }
 .pack-header-buy,
 .pack-header-price { text-align: right; }
-.pack-header-buy-span:nth-child(2).is-expired { font-style: strikethrough; }
+.pack-header-buy-span:nth-child(2).is-expired { font-style: line-through;; }
 /*** END FONTS ***/
 
 /*** MEDIA ***/
