@@ -28,6 +28,8 @@ body, html { background-color: #eee; }
 	font-family:"Megatech";src:url("../../assets/fonts/MegatechAlt.ttf");/*src:url("../../assets/fonts/ALPHABETH.eot") format("embedded-opentype"),url("../../assets/fonts/ALPHABETH.woff2") format("woff2"),url("../../assets/fonts/ALPHABETH.woff") format("woff"),url("../../assets/fonts/ALPHABETH.ttf") format("trutype"),url("../../assets/fonts/ALPHABETH.svg") format("svg");*/}
 @font-face{
 	font-family:"Megatech Blank";src:url("../../assets/fonts/MegatechAltBold.ttf");/*src:url("../../assets/fonts/ALPHABETH.eot") format("embedded-opentype"),url("../../assets/fonts/ALPHABETH.woff2") format("woff2"),url("../../assets/fonts/ALPHABETH.woff") format("woff"),url("../../assets/fonts/ALPHABETH.ttf") format("trutype"),url("../../assets/fonts/ALPHABETH.svg") format("svg");*/}
+@font-face{
+	font-family:"Arial Black";src:url("../../assets/fonts/ariblk.ttf");/*src:url("../../assets/fonts/ALPHABETH.eot") format("embedded-opentype"),url("../../assets/fonts/ALPHABETH.woff2") format("woff2"),url("../../assets/fonts/ALPHABETH.woff") format("woff"),url("../../assets/fonts/ALPHABETH.ttf") format("trutype"),url("../../assets/fonts/ALPHABETH.svg") format("svg");*/}
 
 .header-title { font-family: "Megatech"; }
  {font-family:"Arial Black", sans-serif;}
