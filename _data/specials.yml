@@ -3,3 +3,8 @@
   - price: 280
   - validity: "valid"
   - validity_text: "valid until december 31, 2024"
+- "security":
+  - pack: ["One Magnetic Entry Alarm System", "One Door-Stop Alarm", "One WIFI Spy Camera", "One CCD Dummy Camera"]
+  - price: 420
+  - validity: "valid"
+  - validity_text: "valid until April 30, 2025"
