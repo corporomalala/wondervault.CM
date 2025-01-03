@@ -48,7 +48,10 @@ html, body, main { background-color: #eee; }
 .pack-gallery-nav { text-align: center; }
 .pack-header-buy,
 .pack-header-price { text-align: right; }
-.pack-header-buy-span:nth-child(2).is-expired { font-style: line-through;; }
+.pack.is-expired .pack-header-buy-span:nth-child(2),
+.pack.is-expired .pack-header-hgroup-marquee-span,
+.pack.is-expired .pack-header-hgroup-title,
+.pack.is-expired .pack-header-price-span:nth-child(2) { text-decoration-line: line-through; }
 /*** END FONTS ***/
 
 /*** MEDIA ***/
@@ -170,7 +173,7 @@ html, body, main { background-color: #eee; }
 	.pack-header-price-span:nth-child(1) { font-size: 1.19em; }
 	
 	/*** COMMONS ***/
-	a.pack-header-buy-span:nth-child(2).is-valid,
+	.pack.is-valid .pack-header-buy-span:nth-child(2),
 	.pack-header-price-span:nth-child(2) { border-width: 0 0 5px 0; border-style: solid; }
 	.pack-gallery-list { border-bottom-width: 5px; border-style: solid; }
 	.pack-gallery-nav-toggle { border-width: 5px; border-style: solid; }
@@ -194,7 +197,7 @@ html, body, main { background-color: #eee; }
 	.pack-header-price-span:nth-child(1) { font-size: 2em; }
 	
 	/*** COMMONS ***/
-	.pack-header-buy-span:nth-child(2).is-valid,
+	.pack.is-valid .pack-header-buy-span:nth-child(2),
 	.pack-header-price-span:nth-child(2) { border-width: 0 0 7px 0; border-style: solid; }
 	.pack-gallery-list { border-bottom-width: 7px; border-style: solid; }
 	.pack-gallery-nav-toggle { border-width: 7px; border-style: solid; }

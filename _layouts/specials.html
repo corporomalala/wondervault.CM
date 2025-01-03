@@ -11,11 +11,11 @@ layout: default
 			</nav>
 		
 			<section class="specials"><ul class="specials-list">{% for file in site.data.specials %}{% for data in file %}
-				<li class="specials-list-item"><div class="pack">
+				<li class="specials-list-item"><div class="pack is-{% for content in data[1] %}{{ content.validity }}{% endfor %}">
 					<header class="pack-header">
 						<nav class="pack-header-buy">
 							<span class="pack-header-buy-span">{% for content in data[1] %}{{ content.validity_text }}{% endfor %}&nbsp;&nbsp;</span>
-							<a href="https://wa.me/+27630478534" class="pack-header-buy-span is-{% for content in data[1] %}{{ content.validity }}{% endfor %}"><span class="pack-header-buy-span-icon"></span>(+27)614849225</a>
+							<a href="https://wa.me/+27630478534" class="pack-header-buy-span"><span class="pack-header-buy-span-icon"></span>(+27)614849225</a>
 						</nav>
 					
 						<hgroup class="pack-header-hgroup">
