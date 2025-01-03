@@ -1,8 +1,8 @@
 - "athletes":
   - pack: ["One Wrist Compression Support", "One Elbow Compression Support", "One Knee Compression Support", "One Ankle Compression Support"]
   - price: 280
-  - validity: "valid"
-  - validity_text: "valid until december 31, 2024"
+  - validity: "expired"
+  - validity_text: "expired on december 31, 2024"
 - "security":
   - pack: ["One Magnetic Entry Alarm System", "One Door-Stop Alarm", "One WIFI Spy Camera", "One CCTV camera lookalike/placeholder"]
   - price: 420
